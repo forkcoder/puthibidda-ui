@@ -97,8 +97,6 @@
   height: 95%;
   box-shadow: 20px 20px 40px 0px rgba(0, 0, 0, 0.5);
 }
-.absolute-position {
-}
 .highlighted {
   position: "relative";
   height: "110%";
@@ -127,15 +125,18 @@ export default {
       //   });
       // }
     },
-    leaveBook(selectedIndex) {
-      if (selectedIndex != -1) {
-        $(".book-footer:eq(" + selectedIndex + ")").css("position", "absolute");
-        $(".book-image:eq(" + selectedIndex + ")").css({
-          height: "100%",
-          opacity: "1",
-        });
-      }
+    setHoveredIndex(index) {
+      this.hoveredIndex = index;
     },
+    // leaveBook(selectedIndex) {
+    //   if (selectedIndex != -1) {
+    //     $(".book-footer:eq(" + selectedIndex + ")").css("position", "absolute");
+    //     $(".book-image:eq(" + selectedIndex + ")").css({
+    //       height: "100%",
+    //       opacity: "1",
+    //     });
+    //   }
+    // },
     animateBooks() {
       this.books.forEach((book, index) => {
         const direction = this.calculateBookDirection(index, this.selectedBook);

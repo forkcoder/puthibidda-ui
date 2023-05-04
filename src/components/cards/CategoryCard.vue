@@ -185,7 +185,7 @@ export default {
 	background-size:     cover;
 	background-repeat:   no-repeat;
 	background-position: center center;
-	background-image: url('/storage/images/mobile/addtocart.png');
+	background-image: url('@/assets/images/mobile/addtocart.png');
 	text-indent:25px;
 	color: white;
 	text-shadow: 2px 2px 10px #000000;

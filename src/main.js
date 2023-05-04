@@ -1,27 +1,27 @@
-import { createApp } from 'vue'
-import App from './App.vue'
-import "@babel/polyfill";
 import Vue from 'vue'
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
-// Make BootstrapVue available throughout your project
+import axios from 'axios';
+import '@babel/polyfill';
 Vue.use(BootstrapVue)
-// Optionally install the BootstrapVue icon components plugin
 Vue.use(IconsPlugin)
+Vue.use(axios)
 import $ from "jquery";
 window.$ = window.jQuery = $;
 import 'select2'
 import router from './components/router'
 import 'es6-promise/auto'
-import TodaysSpecial from "./templates/TodaysSpecial.vue";
-import BookFinder from "./templates/BookFinder.vue";
-import WelcomeMenu from "./templates/WelcomeMenu.vue";
-import NewRegistration from "./templates/NewRegistration.vue";
-import HomecontacthelpNav from "./templates/HomecontacthelpNav.vue";
+import { createApp } from 'vue'
+import App from './App.vue'
+import TodaysSpecial from "./components/templates/TodaysSpecial.vue";
+import BookFinder from "./components/templates/BookFinder.vue";
+import WelcomeMenu from "./components/templates/WelcomeMenu.vue";
+import NewRegistration from "./components/templates/NewRegistration.vue";
+import HomecontacthelpNav from "./components/templates/HomecontacthelpNav.vue";
 
-import SuperContainer from "./containers/SuperContainer.vue";
-import MobileContainer from "./containers/MobileContainer.vue";
+import SuperContainer from "./components/containers/SuperContainer.vue";
+import MobileContainer from "./components/containers/MobileContainer.vue";
 
 
 // // bug: hello
