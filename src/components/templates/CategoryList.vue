@@ -15,7 +15,7 @@ class="category">
 </template>
 <script>
 export default {
-name:'Categories',
+name:'CategoryList',
 props:['categories'],
 methods:{
   hoverCategory(selectedIndex) {

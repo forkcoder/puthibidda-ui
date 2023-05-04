@@ -13,8 +13,8 @@ import Router from 'vue-router'
 Vue.use(Router)
 
 import NewBooks from '../templates/NewBooks.vue'
-import Books from '../templates/Books.vue'
-import Categories from '../templates/Categories.vue'
+import Books from '../templates/BookStore.vue'
+import Categories from '../templates/CategoryList.vue'
 
 export default new Router({
   routes: [

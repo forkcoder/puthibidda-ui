@@ -7,8 +7,29 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
-  "devDependencies": {
+  "dependencies": {
+    "@alfsnd/vue-bootstrap-select": "^0.4.4",
+    "@babel/eslint-parser": "^7.21.8",
+    "@babel/polyfill": "^7.4.4",
+    "@vue/cli-plugin-eslint": "^5.0.8",
+    "@vue/cli-service": "^5.0.8",
     "axios": "^1.4.0",
+    "bootstrap-vue": "^2.23.1",
+    "core-js": "^3.8.3",
+    "es6-promise": "^4.2.8",
+    "material-design-icons": "^3.0.1",
+    "node-gyp": "^9.3.1",
+    "npm": "^9.6.5",
+    "promise-polyfill": "8.3.0",
+    "select2": "^4.0.13",
+    "tar": "^6.1.13",
+    "vue-multiselect": "^2.1.7",
+    "vue-router": "^4.1.6",
+    "vue-slide-tabs": "^1.1.3",
+    "vue-validate": "^1.0.1"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^5.0.8",
     "bootstrap": "^5.2.3",
     "cross-env": "^7.0",
     "eslint": "^8.39.0",
@@ -26,22 +47,7 @@
     "sass-loader": "^13.2.2",
     "vue": "^3.2.47",
     "vue-template-compiler": "^2.7.14"
-},
-"dependencies": {
-    "@alfsnd/vue-bootstrap-select": "^0.4.4",
-    "@babel/polyfill": "^7.4.4",
-    "es6-promise": "^4.2.8",
-    "material-design-icons": "^3.0.1",
-    "node-gyp": "^9.3.1",
-    "npm": "^9.6.5",
-    "promise-polyfill": "8.3.0",
-    "select2": "^4.0.13",
-    "tar": "^6.1.13",
-    "vue-multiselect": "^2.1.7",
-    "vue-router": "^4.1.6",
-    "vue-slide-tabs": "^1.1.3",
-    "vue-validate": "^1.0.1"
-},
+  },
   "eslintConfig": {
     "root": true,
     "env": {

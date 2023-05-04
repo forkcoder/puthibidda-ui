@@ -10,17 +10,18 @@ Vue.use(BootstrapVue)
 // Optionally install the BootstrapVue icon components plugin
 Vue.use(IconsPlugin)
 import $ from "jquery";
-require('select2');
+window.$ = window.jQuery = $;
+import 'select2'
 import router from './components/router'
-require('es6-promise/auto');
-import TodaysSpecial from './templates/TodaysSpecial.vue'
-import BookFinder from './templates/BookFinder.vue'
-import WelcomeMenu from './templates/WelcomeMenu.vue'
-import NewRegistration from './templates/NewRegistration.vue'
-import HomecontacthelpNav from './templates/HomecontacthelpNav.vue'
+import 'es6-promise/auto'
+import TodaysSpecial from "./templates/TodaysSpecial.vue";
+import BookFinder from "./templates/BookFinder.vue";
+import WelcomeMenu from "./templates/WelcomeMenu.vue";
+import NewRegistration from "./templates/NewRegistration.vue";
+import HomecontacthelpNav from "./templates/HomecontacthelpNav.vue";
 
-import SuperContainer from './containers/SuperContainer.vue'
-import MobileContainer from './containers/MobileContainer.vue'
+import SuperContainer from "./containers/SuperContainer.vue";
+import MobileContainer from "./containers/MobileContainer.vue";
 
 
 // // bug: hello
