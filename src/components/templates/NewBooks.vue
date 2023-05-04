@@ -146,19 +146,19 @@ export default {
   methods: {
     itemClicked: function (bookdetail) {
       this.bookdetail = bookdetail;
-      $("#book-detail").modal("show");
+      this.$("#book-detail").modal("show");
     },
     setHoveredIndex(index) {
       this.hoveredIndex = index;
     },
     loadData: function () {
       let newarrivalLimit = Math.floor(
-        ($(".baseaccordian").width() * 0.8) / this.booksDisplayConst
+        (this.$(".baseaccordian").width() * 0.8) / this.booksDisplayConst
       );
-      axios
+      this.$http
         .get("/books/totalnewarrivals")
         .then((response) => (this.newarrivalsTotal = response.data));
-      axios
+      this.$http
         .get(
           "/books/newarrivals/" + this.newarrivalsOffset + "/" + newarrivalLimit
         )
@@ -168,11 +168,11 @@ export default {
       this.selectedNewBook = selectedIndex;
       this.animateNewBooks();
       if (selectedIndex != -1) {
-        $(".newbook-footer:eq(" + selectedIndex + ")").css({
+        this.$(".newbook-footer:eq(" + selectedIndex + ")").css({
           position: "relative",
           display: "block",
         });
-        $(".newbook-image:eq(" + selectedIndex + ")").css({
+        this.$(".newbook-image:eq(" + selectedIndex + ")").css({
           height: "110%",
           opacity: "0.3",
         });
@@ -180,11 +180,11 @@ export default {
     },
     leaveNewBook(selectedIndex) {
       if (selectedIndex != -1) {
-        $(".newbook-footer:eq(" + selectedIndex + ")").css({
+        this.$(".newbook-footer:eq(" + selectedIndex + ")").css({
           position: "absolute",
           display: "none",
         });
-        $(".newbook-image:eq(" + selectedIndex + ")").css({
+        this.$(".newbook-image:eq(" + selectedIndex + ")").css({
           height: "100%",
           opacity: "1",
         });
@@ -196,7 +196,7 @@ export default {
           index,
           this.selectedNewBook
         );
-        TweenMax.to(this.$refs[`newbook_${index}`], 0.5, { x: direction * 50 });
+        // TweenMax.to(this.$refs[`newbook_${index}`], 0.5, { x: direction * 50 });
       });
     },
     calculateNewBookDirection(newbookIndex, selectedIndex) {
@@ -211,22 +211,22 @@ export default {
     },
     newArrivalNext: function () {
       let newarrivalLimit = Math.floor(
-        $(".new-book-row").width() / this.booksDisplayConst
+        this.$(".new-book-row").width() / this.booksDisplayConst
       );
       let pos = this.newarrivalsOffset + newarrivalLimit;
       if (pos >= this.newarrivalsTotal) pos = pos - newarrivalLimit;
       else this.newarrivalsOffset = pos;
-      axios
+      this.$http
         .get("/books/newarrivals/" + pos + "/" + newarrivalLimit)
         .then((response) => (this.newbooks = response.data));
     },
     newArrivalPrev: function () {
       let newarrivalLimit = Math.floor(
-        $(".new-book-row").width() / this.booksDisplayConst
+        this.$(".new-book-row").width() / this.booksDisplayConst
       );
       let pos = this.newarrivalsOffset - newarrivalLimit;
       if (pos >= 0) this.newarrivalsOffset = pos;
-      axios
+      this.$http
         .get("/books/newarrivals/" + pos + "/" + newarrivalLimit)
         .then((response) => (this.newbooks = response.data));
     },

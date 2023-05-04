@@ -61,6 +61,7 @@
 }
 </style>
 <script>
+
 export default {
 	name: 'AuthorCard',
 	props:['profile','message'],
@@ -78,7 +79,7 @@ export default {
 			this.$emit('bookdetail',bookdetail);
 		},
 		loadData: function (link) {
-			axios.get(link).then((response)=>{
+			this.$http.get(link).then((response)=>{
 				this.items = response.data;
 				this.totalItems = this.items.length;
 			});

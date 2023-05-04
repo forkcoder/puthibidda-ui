@@ -827,7 +827,7 @@ export default {
   },
   methods: {
     initialize: function () {
-      var select = $("#library_preferences");
+      var select = this.$("#library_preferences");
       select
         .select2({
           placeholder: "বইয়ের ধরন",
@@ -840,17 +840,17 @@ export default {
         });
     },
     showAgreement: function () {
-      $("#agreementModel").modal("show");
+      this.$("#agreementModel").modal("show");
     },
     loadData: function () {
-      // axios.get('/libraries/4').then(response=>(this.library_info=response.data));
-      axios.get("/resources/").then((response) => {
+      // this.$http.get('/libraries/4').then(response=>(this.library_info=response.data));
+      this.$http.get("/resources/").then((response) => {
         this.districts = response.data.districts;
         this.preferences = response.data.categories;
       });
     },
     updatedDistricts() {
-      $("#library_district").prop("disabled", false);
+      this.$("#library_district").prop("disabled", false);
     },
     handleFileUpload() {
       if (typeof this.$refs.file.files[0] === "undefined")
@@ -888,7 +888,7 @@ export default {
       );
       formData.append("_token", this.csrf);
 
-      axios
+      this.$http
         .post("/libraries/register", formData, {
           headers: {
             "Content-Type": "multipart/form-data",

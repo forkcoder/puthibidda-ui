@@ -195,7 +195,7 @@ export default {
       }
     },
     loadData: function () {
-      axios.get(this.datalink).then((response) => {
+      this.$http.get(this.datalink).then((response) => {
         this.loadedBooks = response.data;
         this.totalBooks = this.loadedBooks.length;
         this.renderData();

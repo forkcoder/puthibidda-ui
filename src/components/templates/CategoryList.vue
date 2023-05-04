@@ -43,9 +43,9 @@ export default {
           index,
           this.selectedCategory
         );
-        TweenMax.to(this.$refs[`category_${index}`], 0.9, {
-          x: direction * 50,
-        });
+        // TweenMax.to(this.$refs[`category_${index}`], 0.9, {
+        //   x: direction * 50,
+        // });
       });
     },
     calculateCategoryDirection(categoryIndex, selectedIndex) {

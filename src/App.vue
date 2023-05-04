@@ -1,6 +1,6 @@
 <template>
-  <div id="app">
-    <!-- <router-view :appnewbook="appdata" :categorypage="categorypage"/> -->
+  <div id = "app">
+    <!-- <router-view :appnewbook="appdata" :categorypage="categorypage" /> -->
   </div>
 </template>
 

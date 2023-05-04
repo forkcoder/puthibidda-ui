@@ -118,8 +118,8 @@ export default {
       // this.selectedBook = selectedIndex;
       // this.animateBooks();
       // if (selectedIndex != -1) {
-      //   $(".book-footer:eq(" + selectedIndex + ")").css("position", "relative");
-      //   $(".book-image:eq(" + selectedIndex + ")").css({
+      //   this.$(".book-footer:eq(" + selectedIndex + ")").css("position", "relative");
+      //   this.$(".book-image:eq(" + selectedIndex + ")").css({
       //     height: "110%",
       //     opacity: "0.3",
       //   });
@@ -130,8 +130,8 @@ export default {
     },
     // leaveBook(selectedIndex) {
     //   if (selectedIndex != -1) {
-    //     $(".book-footer:eq(" + selectedIndex + ")").css("position", "absolute");
-    //     $(".book-image:eq(" + selectedIndex + ")").css({
+    //     this.$(".book-footer:eq(" + selectedIndex + ")").css("position", "absolute");
+    //     this.$(".book-image:eq(" + selectedIndex + ")").css({
     //       height: "100%",
     //       opacity: "1",
     //     });
@@ -140,7 +140,7 @@ export default {
     animateBooks() {
       this.books.forEach((book, index) => {
         const direction = this.calculateBookDirection(index, this.selectedBook);
-        TweenMax.to(this.$refs[`book_${index}`], 0.9, { x: direction * 50 });
+        // TweenMax.to(this.$refs[`book_${index}`], 0.9, { x: direction * 50 });
       });
     },
     calculateBookDirection(bookIndex, selectedIndex) {
