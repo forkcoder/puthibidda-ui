@@ -7,19 +7,41 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
-  "dependencies": {
-    "core-js": "^3.8.3",
-    "vue": "^3.2.13"
-  },
   "devDependencies": {
-    "@babel/core": "^7.12.16",
-    "@babel/eslint-parser": "^7.12.16",
-    "@vue/cli-plugin-babel": "~5.0.0",
-    "@vue/cli-plugin-eslint": "~5.0.0",
-    "@vue/cli-service": "~5.0.0",
-    "eslint": "^7.32.0",
-    "eslint-plugin-vue": "^8.0.3"
-  },
+    "axios": "^1.4.0",
+    "bootstrap": "^5.2.3",
+    "cross-env": "^7.0",
+    "eslint": "^8.39.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-vue": "^9.11.0",
+    "jquery": "^3.6.4",
+    "jquery-ui": "^1.13.2",
+    "laravel-mix": "^6.0.49",
+    "lodash": "^4.17.21",
+    "node-sass": "^8.0.0",
+    "popper.js": "^1.15.0",
+    "resolve-url-loader": "^5.0.0",
+    "sass": "^1.62.1",
+    "sass-loader": "^13.2.2",
+    "vue": "^3.2.47",
+    "vue-template-compiler": "^2.7.14"
+},
+"dependencies": {
+    "@alfsnd/vue-bootstrap-select": "^0.4.4",
+    "@babel/polyfill": "^7.4.4",
+    "es6-promise": "^4.2.8",
+    "material-design-icons": "^3.0.1",
+    "node-gyp": "^9.3.1",
+    "npm": "^9.6.5",
+    "promise-polyfill": "8.3.0",
+    "select2": "^4.0.13",
+    "tar": "^6.1.13",
+    "vue-multiselect": "^2.1.7",
+    "vue-router": "^4.1.6",
+    "vue-slide-tabs": "^1.1.3",
+    "vue-validate": "^1.0.1"
+},
   "eslintConfig": {
     "root": true,
     "env": {
