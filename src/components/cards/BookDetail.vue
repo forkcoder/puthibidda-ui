@@ -17,14 +17,30 @@
               <div class="make3D">
                 <div class="product-front">
                   <!-- <div class="shadow"></div> -->
-                  <img :src="'./storage/bookcovers/'+ bookdetail.book_cover">
+                  <img
+                    :src="require('@/assets/bookcovers/' + bookdetail.book_cover)"
+                  />
                   <div class="image_overlay"></div>
-                  <div class="add_to_cart cd-add-to-cart js-cd-add-to-cart" v-on:click="cartEventListener($event)" :data-price="bookdetail.book_price" :data-title="bookdetail.book_title" :data-cover="'./storage/bookcovers/'+ bookdetail.book_id+'.jpg'" >Add to cart</div>
+                  <div
+                    class="add_to_cart cd-add-to-cart js-cd-add-to-cart"
+                    v-on:click="cartEventListener($event)"
+                    :data-price="bookdetail.book_price"
+                    :data-title="bookdetail.book_title"
+                    :data-cover="
+                      require('@/assets/bookcovers/' + bookdetail.book_id + '.jpg')
+                    "
+                  >
+                    Add to cart
+                  </div>
                   <div class="view_gallery">View gallery</div>
                   <div class="stats">
                     <div class="stats-container">
-                      <span class="product_name">BDT {{bookdetail.book_title}}</span>
-                      <span style="whitespace:nowrap" class="product_price">{{bookdetail.book_price}}</span>
+                      <span class="product_name"
+                        >BDT {{ bookdetail.book_title }}</span
+                      >
+                      <span style="whitespace: nowrap" class="product_price">{{
+                        bookdetail.book_price
+                      }}</span>
                       <p></p>
                     </div>
                   </div>
@@ -33,9 +49,21 @@
                   <div class="shadow"></div>
                   <div class="carousel">
                     <ul class="carousel-container">
-                      <li><img :src="'./storage/bookcovers/'+ bookdetail.book_cover"></li>
-                      <li><img :src="'./storage/bookcovers/'+ bookdetail.book_cover"></li>
-                      <li><img :src="'./storage/bookcovers/'+ bookdetail.book_cover"></li>
+                      <li>
+                        <img
+                          :src="require('@/assets/bookcovers/' + bookdetail.book_cover)"
+                        />
+                      </li>
+                      <li>
+                        <img
+                          :src="require('@/assets/bookcovers/' + bookdetail.book_cover)"
+                        />
+                      </li>
+                      <li>
+                        <img
+                          :src="require('@/assets/bookcovers/' + bookdetail.book_cover)"
+                        />
+                      </li>
                     </ul>
                     <div class="arrows-perspective">
                       <div class="carouselPrev">
@@ -57,33 +85,41 @@
             </div>
           </div>
           <div class="profile_info">
-            <h2 style="color:black">{{bookdetail.book_title}}</h2>
-            <h6 style="color:black">{{bookdetail.book_description}}</h6>
-            <div class="row" >
-              <div  class="col-xs-12 col-md-6">
+            <h2 style="color: black">{{ bookdetail.book_title }}</h2>
+            <h6 style="color: black">{{ bookdetail.book_description }}</h6>
+            <div class="row">
+              <div class="col-xs-12 col-md-6">
                 <div class="well well-sm">
                   <div class="row" id="displayRating">
                     <div class="col-xs-12 col-md-6 text-center">
-                      <h1 class="rating-num">
-                        4.0</h1>
-                        <div class="rating">
-                          <span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star">
-                          </span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star">
-                          </span><span class="glyphicon glyphicon-star-empty"></span>
-                        </div>
-                        <div>
-                          <span class="glyphicon glyphicon-user"></span>1,050,008 total
-                        </div>
+                      <h1 class="rating-num">4.0</h1>
+                      <div class="rating">
+                        <span class="glyphicon glyphicon-star"></span
+                        ><span class="glyphicon glyphicon-star"> </span
+                        ><span class="glyphicon glyphicon-star"></span
+                        ><span class="glyphicon glyphicon-star"> </span
+                        ><span class="glyphicon glyphicon-star-empty"></span>
                       </div>
-                      <div class="col-xs-12 col-md-6">
-                        <div class="row rating-desc">
-                          <div class="col-xs-3 col-md-3 text-right">
-                            <span class="glyphicon glyphicon-star"></span>5
-                          </div>
-                          <div class="col-xs-8 col-md-9">
-                            <div class="progress progress-striped">
-                              <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20"
-                              aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                      <div>
+                        <span class="glyphicon glyphicon-user"></span>1,050,008
+                        total
+                      </div>
+                    </div>
+                    <div class="col-xs-12 col-md-6">
+                      <div class="row rating-desc">
+                        <div class="col-xs-3 col-md-3 text-right">
+                          <span class="glyphicon glyphicon-star"></span>5
+                        </div>
+                        <div class="col-xs-8 col-md-9">
+                          <div class="progress progress-striped">
+                            <div
+                              class="progress-bar progress-bar-success"
+                              role="progressbar"
+                              aria-valuenow="20"
+                              aria-valuemin="0"
+                              aria-valuemax="100"
+                              style="width: 80%"
+                            >
                               <span class="sr-only">80%</span>
                             </div>
                           </div>
@@ -94,101 +130,143 @@
                         </div>
                         <div class="col-xs-8 col-md-9">
                           <div class="progress">
-                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20"
-                            aria-valuemin="0" aria-valuemax="100" style="width: 60%">
-                            <span class="sr-only">60%</span>
+                            <div
+                              class="progress-bar progress-bar-success"
+                              role="progressbar"
+                              aria-valuenow="20"
+                              aria-valuemin="0"
+                              aria-valuemax="100"
+                              style="width: 60%"
+                            >
+                              <span class="sr-only">60%</span>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                      <!-- end 4 -->
-                      <div class="col-xs-3 col-md-3 text-right">
-                        <span class="glyphicon glyphicon-star"></span>3
-                      </div>
-                      <div class="col-xs-8 col-md-9">
-                        <div class="progress">
-                          <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20"
-                          aria-valuemin="0" aria-valuemax="100" style="width: 40%">
-                          <span class="sr-only">40%</span>
+                        <!-- end 4 -->
+                        <div class="col-xs-3 col-md-3 text-right">
+                          <span class="glyphicon glyphicon-star"></span>3
                         </div>
+                        <div class="col-xs-8 col-md-9">
+                          <div class="progress">
+                            <div
+                              class="progress-bar progress-bar-info"
+                              role="progressbar"
+                              aria-valuenow="20"
+                              aria-valuemin="0"
+                              aria-valuemax="100"
+                              style="width: 40%"
+                            >
+                              <span class="sr-only">40%</span>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- end 3 -->
+                        <div class="col-xs-3 col-md-3 text-right">
+                          <span class="glyphicon glyphicon-star"></span>2
+                        </div>
+                        <div class="col-xs-8 col-md-9">
+                          <div class="progress">
+                            <div
+                              class="progress-bar progress-bar-warning"
+                              role="progressbar"
+                              aria-valuenow="20"
+                              aria-valuemin="0"
+                              aria-valuemax="100"
+                              style="width: 20%"
+                            >
+                              <span class="sr-only">20%</span>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- end 2 -->
+                        <div class="col-xs-3 col-md-3 text-right">
+                          <span class="glyphicon glyphicon-star"></span>1
+                        </div>
+                        <div class="col-xs-8 col-md-9">
+                          <div class="progress">
+                            <div
+                              class="progress-bar progress-bar-danger"
+                              role="progressbar"
+                              aria-valuenow="80"
+                              aria-valuemin="0"
+                              aria-valuemax="100"
+                              style="width: 15%"
+                            >
+                              <span class="sr-only">15%</span>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- end 1 -->
                       </div>
-                    </div>
-                    <!-- end 3 -->
-                    <div class="col-xs-3 col-md-3 text-right">
-                      <span class="glyphicon glyphicon-star"></span>2
-                    </div>
-                    <div class="col-xs-8 col-md-9">
-                      <div class="progress">
-                        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="20"
-                        aria-valuemin="0" aria-valuemax="100" style="width: 20%">
-                        <span class="sr-only">20%</span>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- end 2 -->
-                  <div class="col-xs-3 col-md-3 text-right">
-                    <span class="glyphicon glyphicon-star"></span>1
-                  </div>
-                  <div class="col-xs-8 col-md-9">
-                    <div class="progress">
-                      <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80"
-                      aria-valuemin="0" aria-valuemax="100" style="width: 15%">
-                      <span class="sr-only">15%</span>
+                      <!-- end row -->
                     </div>
                   </div>
                 </div>
-                <!-- end 1 -->
               </div>
-              <!-- end row -->
             </div>
           </div>
+          <div class="book_description">
+            <span class="salePercentage" style="margin-top: 15px"
+              >{{ bookdetail.book_offer_rate }}%</span
+            >
+            <span class="saleOff" style="margin-top: 15px">OFF</span>
+          </div>
+        </div>
+        <!-- </div> -->
+        <div class="col-sm-4">
+          <homedelivery-card></homedelivery-card>
         </div>
       </div>
     </div>
-  </div>
-  <div class="book_description">
-    <span class="salePercentage" style="margin-top: 15px">{{bookdetail.book_offer_rate}}%</span>
-    <span class="saleOff" style="margin-top: 15px">OFF</span>
-  </div>
-
-</div>
-<!-- </div> -->
-<div class="col-sm-4">
-  <homedelivery-card></homedelivery-card>
-</div>
-</div>
-</div>
-</ul>
+  </ul>
 </template>
 <style scoped>
-#displayRating{
+#displayRating {
   color: black;
   background-color: lightgray;
-  background:lightgray;
+  background: lightgray;
 }
-.glyphicon { margin-right:5px;}
-.rating .glyphicon {font-size: 22px;}
-.rating-num { margin-top:0px;font-size: 54px; }
-.progress { margin-bottom: 5px;}
-.progress-bar { text-align: left; }
-.rating-desc .col-md-3 {padding-right: 0px;}
-.sr-only { margin-left: 5px;overflow: visible;clip: auto; }
-.model{
+.glyphicon {
+  margin-right: 5px;
+}
+.rating .glyphicon {
+  font-size: 22px;
+}
+.rating-num {
+  margin-top: 0px;
+  font-size: 54px;
+}
+.progress {
+  margin-bottom: 5px;
+}
+.progress-bar {
+  text-align: left;
+}
+.rating-desc .col-md-3 {
+  padding-right: 0px;
+}
+.sr-only {
+  margin-left: 5px;
+  overflow: visible;
+  clip: auto;
+}
+.model {
   color: #616161;
-  font-family: Roboto,sans-serif;
+  font-family: Roboto, sans-serif;
   font-weight: 300;
 }
-.bookdetail{
+.bookdetail {
   display: flex;
   flex-direction: row;
 }
-.card{
+.card {
   display: flex;
   justify-content: center;
 }
-.card-header{
+.card-header {
   padding: 0 1rem;
 }
-.card-body{
+.card-body {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -202,7 +280,7 @@
 }
 
 .header-navigation a {
-  font-size: .80rem;
+  font-size: 0.8rem;
 }
 
 .header-navigation .breadcrumb {
@@ -238,7 +316,7 @@
 }
 
 .store-body .book_description {
-  border-left: 1px solid rgba(0,0,0,.125);
+  border-left: 1px solid rgba(0, 0, 0, 0.125);
 }
 
 .store-body .product {
@@ -263,7 +341,7 @@
 
 .page h2 {
   padding: 15px 0 0 20px;
-  font: 400 35px/1.5 'Lilita One', Helvetica, sans-serif;
+  font: 400 35px/1.5 "Lilita One", Helvetica, sans-serif;
 }
 
 .page p {
@@ -271,7 +349,6 @@
   font: 12px/1.5 Helvetica, sans-serif;
   color: #4b4b4b;
 }
-
 
 .triangle {
   width: 0px;
@@ -285,7 +362,7 @@
   /* -webkit-box-shadow: -5px -5px 20px rgba(0,0,0,0.6);
   -moz-box-shadow: -5px -5px 20px rgba(0,0,0,0.6);
   box-shadow: -5px -5px 20px rgba(0,0,0,0.6); */
-  box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.5);
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.5);
 }
 
 .foldtl:before {
@@ -297,9 +374,9 @@
   height: 0px;
   border-top: 70px solid #eee;
   border-right: 70px solid transparent;
-  -webkit-box-shadow: -7px -7px 7px rgba(0,0,0,0.3);
-  -moz-box-shadow: -7px -7px 7px rgba(0,0,0,0.3);
-  box-shadow: -7px -7px 7px rgba(0,0,0,0.3);
+  -webkit-box-shadow: -7px -7px 7px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: -7px -7px 7px rgba(0, 0, 0, 0.3);
+  box-shadow: -7px -7px 7px rgba(0, 0, 0, 0.3);
 }
 
 .foldtl:after {
@@ -313,14 +390,13 @@
   border-left: 71px solid transparent;
 }
 
-
 .salePercentage {
   font-size: 20px;
   font-weight: bold;
   position: absolute;
   padding-top: 50px;
   padding-right: 5px;
-  right:0;
+  right: 0;
   z-index: 1;
   bottom: 0px;
   color: #f02333;
@@ -335,14 +411,14 @@
   z-index: 1;
   color: #f02333;
 }
-.product{
+.product {
   position: relative;
   perspective: 800px;
-  width:248px;
-  height:372px;
+  width: 248px;
+  height: 372px;
   transform-style: preserve-3d;
   transition: transform 5s;
-  float:left;
+  float: left;
   margin-right: 23px;
   -webkit-transition: width 500ms ease-in-out;
   -moz-transition: width 500ms ease-in-out;
@@ -350,103 +426,110 @@
   -o-transition: width 500ms ease-in-out;
   transition: width 500ms ease-in-out;
 }
-.product-front img{width:100%;}
-.product-front, .product-back{
-  width:256px;
-  height:380px;
-  background:#fff;
-  position:absolute;
-  left:-5px;
-  top:-5px;
+.product-front img {
+  width: 100%;
+}
+.product-front,
+.product-back {
+  width: 256px;
+  height: 380px;
+  background: #fff;
+  position: absolute;
+  left: -5px;
+  top: -5px;
   -webkit-transition: all 100ms ease-out;
   -moz-transition: all 100ms ease-out;
   -o-transition: all 100ms ease-out;
   transition: all 100ms ease-out;
 }
-.product-back{
-  display:none;
-  transform: rotateY( 180deg );
+.product-back {
+  display: none;
+  transform: rotateY(180deg);
 }
 .make3D.animate .product-back,
 .make3D.animate .product-front,
-div.large .product-back{
-  top:0px;
-  left:0px;
+div.large .product-back {
+  top: 0px;
+  left: 0px;
   -webkit-transition: all 100ms ease-out;
   -moz-transition: all 100ms ease-out;
   -o-transition: all 100ms ease-out;
   transition: all 100ms ease-out;
 }
-.make3D{
-  width:247px;
-  height:371px;
-  position:absolute;
-  top:10px;
-  left:10px;
-  overflow:hidden;
+.make3D {
+  width: 247px;
+  height: 371px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  overflow: hidden;
   transform-style: preserve-3d;
-  -webkit-transition:  100ms ease-out;
-  -moz-transition:  100ms ease-out;
-  -o-transition:  100ms ease-out;
-  transition:  100ms ease-out;
-  box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.5);
+  -webkit-transition: 100ms ease-out;
+  -moz-transition: 100ms ease-out;
+  -o-transition: 100ms ease-out;
+  transition: 100ms ease-out;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.5);
 }
-div.make3D.flip-10{
-  -webkit-transform: rotateY( -10deg );
-  -moz-transform: rotateY( -10deg );
-  -o-transform: rotateY( -10deg );
-  transform: rotateY( -10deg );
-  transition:  50ms ease-out;
+div.make3D.flip-10 {
+  -webkit-transform: rotateY(-10deg);
+  -moz-transform: rotateY(-10deg);
+  -o-transform: rotateY(-10deg);
+  transform: rotateY(-10deg);
+  transition: 50ms ease-out;
 }
-div.make3D.flip90{
-  -webkit-transform: rotateY( 90deg );
-  -moz-transform: rotateY( 90deg );
-  -o-transform: rotateY( 90deg );
-  transform: rotateY( 90deg );
-  transition:  100ms ease-in;
+div.make3D.flip90 {
+  -webkit-transform: rotateY(90deg);
+  -moz-transform: rotateY(90deg);
+  -o-transform: rotateY(90deg);
+  transform: rotateY(90deg);
+  transition: 100ms ease-in;
 }
-div.make3D.flip190{
-  -webkit-transform: rotateY( 190deg );
-  -moz-transform: rotateY( 190deg );
-  -o-transform: rotateY( 190deg );
-  transform: rotateY( 190deg );
-  transition:  100ms ease-out;
+div.make3D.flip190 {
+  -webkit-transform: rotateY(190deg);
+  -moz-transform: rotateY(190deg);
+  -o-transform: rotateY(190deg);
+  transform: rotateY(190deg);
+  transition: 100ms ease-out;
 }
-div.make3D.flip180{
-  -webkit-transform: rotateY( 180deg );
-  -moz-transform: rotateY( 180deg );
-  -o-transform: rotateY( 180deg );
-  transform: rotateY( 180deg );
-  transition:  150ms ease-out;
+div.make3D.flip180 {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  transition: 150ms ease-out;
 }
-.make3D.animate{
-  top:5px;
-  left:5px;
-  width:256px;
-  height:380px;
-  box-shadow:0px 5px 31px -1px rgba(0, 0, 0, 0.15);
-  -webkit-transition:  100ms ease-out;
-  -moz-transition:  100ms ease-out;
-  -o-transition:  100ms ease-out;
-  transition:  100ms ease-out;
+.make3D.animate {
+  top: 5px;
+  left: 5px;
+  width: 256px;
+  height: 380px;
+  box-shadow: 0px 5px 31px -1px rgba(0, 0, 0, 0.15);
+  -webkit-transition: 100ms ease-out;
+  -moz-transition: 100ms ease-out;
+  -o-transition: 100ms ease-out;
+  transition: 100ms ease-out;
 }
-div.large .make3D{
-  top:0;
-  left:0;
-  width:256px;
-  height:380px;
-  -webkit-transition:  300ms ease-out;
-  -moz-transition:  300ms ease-out;
-  -o-transition:  300ms ease-out;
-  transition:  300ms ease-out;
+div.large .make3D {
+  top: 0;
+  left: 0;
+  width: 256px;
+  height: 380px;
+  -webkit-transition: 300ms ease-out;
+  -moz-transition: 300ms ease-out;
+  -o-transition: 300ms ease-out;
+  transition: 300ms ease-out;
 }
-.large div.make3D{box-shadow:0px 5px 31px -1px rgba(0, 0, 0, 0);}
-.large div.flip-back{display:none;}
-.stats-container{
-  background:#fff;
-  position:absolute;
-  top:382px;
-  left:0;
+.large div.make3D {
+  box-shadow: 0px 5px 31px -1px rgba(0, 0, 0, 0);
+}
+.large div.flip-back {
+  display: none;
+}
+.stats-container {
+  background: #fff;
+  position: absolute;
+  top: 382px;
+  left: 0;
   width: 252px;
   height: 300px;
   padding: 24px 40px 35px 32px;
@@ -455,211 +538,235 @@ div.large .make3D{
   -o-transition: all 200ms ease-out;
   transition: all 200ms ease-out;
 }
-.make3D.animate .stats-container{
-  top:265px;
+.make3D.animate .stats-container {
+  top: 265px;
   -webkit-transition: all 200ms ease-out;
   -moz-transition: all 200ms ease-out;
   -o-transition: all 200ms ease-out;
   transition: all 200ms ease-out;
 }
-.stats-container .product_name{
+.stats-container .product_name {
   font-size: 15px;
   color: #393c45;
   font-weight: 700;
 }
-.stats-container p{
-  font-size:15px;
-  color:#b1b1b3;
-  padding:2px 0 20px 0;
+.stats-container p {
+  font-size: 15px;
+  color: #b1b1b3;
+  padding: 2px 0 20px 0;
 }
-.stats-container .product_price{
-  float:right;
-  color:#5ff7d2;
-  font-size:22px;
-  font-weight:600;
+.stats-container .product_price {
+  float: right;
+  color: #5ff7d2;
+  font-size: 22px;
+  font-weight: 600;
 }
-.image_overlay{
-  position:absolute;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  background:#5ff7d2;
-  opacity:0;
+.image_overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #5ff7d2;
+  opacity: 0;
 }
-.make3D.animate .image_overlay{
-  opacity:0.7;
+.make3D.animate .image_overlay {
+  opacity: 0.7;
   -webkit-transition: all 200ms ease-out;
   -moz-transition: all 200ms ease-out;
   -o-transition: all 200ms ease-out;
   transition: all 200ms ease-out;
 }
-.product-options{
-  padding:0;
+.product-options {
+  padding: 0;
 }
-.product-options strong{
-  font-weight:700;
-  color:#393c45;
-  font-size:14px;
+.product-options strong {
+  font-weight: 700;
+  color: #393c45;
+  font-size: 14px;
 }
-.product-options span{
-  color:#969699;
-  font-size:14px;
-  display:block;
-  margin-bottom:8px;
+.product-options span {
+  color: #969699;
+  font-size: 14px;
+  display: block;
+  margin-bottom: 8px;
 }
-.add_to_cart{
-  position:absolute;
-  top:80px;
-  left:50%;
-  width:152px;
-  font-size:15px;
-  margin-left:-78px;
-  border:2px solid #fff;
-  color:#fff;
-  text-align:center;
-  text-transform:uppercase;
-  font-weight:700;
-  padding:10px 0;
-  opacity:0;
+.add_to_cart {
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  width: 152px;
+  font-size: 15px;
+  margin-left: -78px;
+  border: 2px solid #fff;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 10px 0;
+  opacity: 0;
   -webkit-transition: all 200ms ease-out;
   -moz-transition: all 200ms ease-out;
   -o-transition: all 200ms ease-out;
   transition: all 200ms ease-out;
 }
-.add_to_cart:hover{
-  background:#fff;
-  color:#5ff7d2;
-  cursor:pointer;
+.add_to_cart:hover {
+  background: #fff;
+  color: #5ff7d2;
+  cursor: pointer;
+}
+.make3D.animate .add_to_cart {
+  opacity: 1;
+  -webkit-transition: all 200ms ease-out;
+  -moz-transition: all 200ms ease-out;
+  -o-transition: all 200ms ease-out;
+  transition: all 200ms ease-out;
+}
+.view_gallery {
+  position: absolute;
+  top: 144px;
+  left: 50%;
+  width: 152px;
+  font-size: 15px;
+  margin-left: -78px;
+  border: 2px solid #fff;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 10px 0;
+  opacity: 0;
+  -webkit-transition: all 200ms ease-out;
+  -moz-transition: all 200ms ease-out;
+  -o-transition: all 200ms ease-out;
+  transition: all 200ms ease-out;
+}
+.view_gallery:hover {
+  background: #fff;
+  color: #5ff7d2;
+  cursor: pointer;
+}
+.make3D.animate .view_gallery {
+  opacity: 1;
+  -webkit-transition: all 200ms ease-out;
+  -moz-transition: all 200ms ease-out;
+  -o-transition: all 200ms ease-out;
+  transition: all 200ms ease-out;
+}
+div.colors div {
+  margin-top: 3px;
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+  float: left;
+}
+div.colors div span {
+  width: 15px;
+  height: 15px;
+  display: block;
+  border-radius: 50%;
+}
+div.colors div span:hover {
+  width: 17px;
+  height: 17px;
+  margin: -1px 0 0 -1px;
+}
+div.c-blue span {
+  background: #6e8cd5;
+}
+div.c-red span {
+  background: #f56060;
+}
+div.c-green span {
+  background: #44c28d;
+}
+div.c-white span {
+  background: #fff;
+  width: 14px;
+  height: 14px;
+  border: 1px solid #e8e9eb;
+}
+div.shadow {
+  width: 335px;
+  height: 520px;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  display: none;
 
+  background: -webkit-linear-gradient(
+    left,
+    rgba(0, 0, 0, 0.1),
+    rgba(0, 0, 0, 0.2)
+  );
+  background: -o-linear-gradient(right, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2));
+  background: -moz-linear-gradient(
+    right,
+    rgba(0, 0, 0, 0.1),
+    rgba(0, 0, 0, 0.2)
+  );
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2));
 }
-.make3D.animate .add_to_cart{
-  opacity:1;
-  -webkit-transition: all 200ms ease-out;
-  -moz-transition: all 200ms ease-out;
-  -o-transition: all 200ms ease-out;
-  transition: all 200ms ease-out;
+.product-back div.shadow {
+  z-index: 10;
+  opacity: 1;
+  background: -webkit-linear-gradient(
+    left,
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.1)
+  );
+  background: -o-linear-gradient(right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1));
+  background: -moz-linear-gradient(
+    right,
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.1)
+  );
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1));
 }
-.view_gallery{
-  position:absolute;
-  top:144px;
-  left:50%;
-  width:152px;
-  font-size:15px;
-  margin-left:-78px;
-  border:2px solid #fff;
-  color:#fff;
-  text-align:center;
-  text-transform:uppercase;
-  font-weight:700;
-  padding:10px 0;
-  opacity:0;
-  -webkit-transition: all 200ms ease-out;
-  -moz-transition: all 200ms ease-out;
-  -o-transition: all 200ms ease-out;
-  transition: all 200ms ease-out;
+.flip-back {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
 }
-.view_gallery:hover{
-  background:#fff;
-  color:#5ff7d2;
-  cursor:pointer;
-
-}
-.make3D.animate .view_gallery{
-  opacity:1;
-  -webkit-transition: all 200ms ease-out;
-  -moz-transition: all 200ms ease-out;
-  -o-transition: all 200ms ease-out;
-  transition: all 200ms ease-out;
-}
-div.colors div{
-  margin-top:3px;
-  width:15px;
-  height:15px;
-  margin-right:5px;
-  float:left;
-}
-div.colors div span{
-  width:15px;
-  height:15px;
-  display:block;
-  border-radius:50%;
-}
-div.colors div span:hover{
-  width:17px;
-  height:17px;
-  margin:-1px 0 0 -1px;
-}
-div.c-blue span{background:#6e8cd5;}
-div.c-red span{background:#f56060;}
-div.c-green span{background:#44c28d;}
-div.c-white span{
-  background:#fff;
-  width:14px;
-  height:14px;
-  border:1px solid #e8e9eb;
-}
-div.shadow{
-  width:335px;height:520px;
-  opacity:0;
-  position:absolute;
-  top:0;
-  left:0;
-  z-index:3;
-  display:none;
-
-  background: -webkit-linear-gradient(left,rgba(0,0,0,0.1),rgba(0,0,0,0.2));
-  background: -o-linear-gradient(right,rgba(0,0,0,0.1),rgba(0,0,0,0.2));
-  background: -moz-linear-gradient(right,rgba(0,0,0,0.1),rgba(0,0,0,0.2));
-  background: linear-gradient(to right, rgba(0,0,0,0.1), rgba(0,0,0,0.2));
-}
-.product-back div.shadow{
-  z-index:10;
-  opacity:1;
-  background: -webkit-linear-gradient(left,rgba(0,0,0,0.2),rgba(0,0,0,0.1));
-  background: -o-linear-gradient(right,rgba(0,0,0,0.2),rgba(0,0,0,0.1));
-  background: -moz-linear-gradient(right,rgba(0,0,0,0.2),rgba(0,0,0,0.1));
-  background: linear-gradient(to right, rgba(0,0,0,0.2), rgba(0,0,0,0.1));
-}
-.flip-back{
-  position:absolute;
-  top:20px;
-  right:20px;
-  width:30px;
-  height:30px;
-  cursor:pointer;
-}
-.cx, .cy{
-  background:#d2d5dc;
-  position:absolute;
-  width:0px;
-  top:15px;
-  right:15px;
-  height:3px;
+.cx,
+.cy {
+  background: #d2d5dc;
+  position: absolute;
+  width: 0px;
+  top: 15px;
+  right: 15px;
+  height: 3px;
   -webkit-transition: all 250ms ease-in-out;
   -moz-transition: all 250ms ease-in-out;
   -ms-transition: all 250ms ease-in-out;
   -o-transition: all 250ms ease-in-out;
   transition: all 250ms ease-in-out;
 }
-.flip-back:hover .cx, .flip-back:hover .cy{
-  background:#979ca7;
+.flip-back:hover .cx,
+.flip-back:hover .cy {
+  background: #979ca7;
   -webkit-transition: all 250ms ease-in-out;
   -moz-transition: all 250ms ease-in-out;
   -ms-transition: all 250ms ease-in-out;
   -o-transition: all 250ms ease-in-out;
   transition: all 250ms ease-in-out;
 }
-.cx.s1, .cy.s1{
-  right:0;
-  width:30px;
+.cx.s1,
+.cy.s1 {
+  right: 0;
+  width: 30px;
   -webkit-transition: all 100ms ease-out;
   -moz-transition: all 100ms ease-out;
   -ms-transition: all 100ms ease-out;
   -o-transition: all 100ms ease-out;
   transition: all 100ms ease-out;
 }
-.cy.s2{
+.cy.s2 {
   -ms-transform: rotate(50deg);
   -webkit-transform: rotate(50deg);
   transform: rotate(50deg);
@@ -669,7 +776,7 @@ div.shadow{
   -o-transition: all 100ms ease-out;
   transition: all 100ms ease-out;
 }
-.cy.s3{
+.cy.s3 {
   -ms-transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
@@ -679,16 +786,16 @@ div.shadow{
   -o-transition: all 100ms ease-out;
   transition: all 100ms ease-out;
 }
-.cx.s1{
-  right:0;
-  width:30px;
+.cx.s1 {
+  right: 0;
+  width: 30px;
   -webkit-transition: all 100ms ease-out;
   -moz-transition: all 100ms ease-out;
   -ms-transition: all 100ms ease-out;
   -o-transition: all 100ms ease-out;
   transition: all 100ms ease-out;
 }
-.cx.s2{
+.cx.s2 {
   -ms-transform: rotate(140deg);
   -webkit-transform: rotate(140deg);
   transform: rotate(140deg);
@@ -698,7 +805,7 @@ div.shadow{
   -o-transition: all 100ms ease-out;
   transition: all 100ms ease-out;
 }
-.cx.s3{
+.cx.s3 {
   -ms-transform: rotate(135deg);
   -webkit-transform: rotate(135deg);
   transform: rotate(135deg);
@@ -708,130 +815,130 @@ div.shadow{
   -o-transition: all 100ms ease-out;
   transition: all 100ms ease-out;
 }
-.carousel{
-  width:256px;
-  height:500px;
-  overflow:hidden;
-  position:relative;
+.carousel {
+  width: 256px;
+  height: 500px;
+  overflow: hidden;
+  position: relative;
 }
-.carousel ul{
-  position:absolute;
-  top:0;
-  left:0;
+.carousel ul {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
-.carousel li{
-  width:256px;
-  height:500px;
-  float:left;
-  overflow:hidden;
+.carousel li {
+  width: 256px;
+  height: 500px;
+  float: left;
+  overflow: hidden;
 }
-.carousel img{
+.carousel img {
   margin-top: -22px;
   width: 110%;
 }
-.arrows-perspective{
-  width:256px;
-  height:55px;
+.arrows-perspective {
+  width: 256px;
+  height: 55px;
   position: absolute;
   top: 218px;
   transform-style: preserve-3d;
   transition: transform 5s;
   perspective: 335px;
 }
-.carouselPrev, .carouselNext{
+.carouselPrev,
+.carouselNext {
   width: 50px;
   height: 55px;
   background: #ccc;
   position: absolute;
-  top:0;
+  top: 0;
   transition: all 200ms ease-out;
-  opacity:0.9;
-  cursor:pointer;
+  opacity: 0.9;
+  cursor: pointer;
 }
-.carouselNext{
-  top:0;
+.carouselNext {
+  top: 0;
   right: -26px;
-  -webkit-transform: rotateY( -117deg );
-  -moz-transform: rotateY( -117deg );
-  -o-transform: rotateY( -117deg );
-  transform: rotateY( -117deg );
+  -webkit-transform: rotateY(-117deg);
+  -moz-transform: rotateY(-117deg);
+  -o-transform: rotateY(-117deg);
+  transform: rotateY(-117deg);
   transition: all 200ms ease-out;
-
 }
-.carouselNext.visible{
-  right:0;
-  opacity:0.8;
+.carouselNext.visible {
+  right: 0;
+  opacity: 0.8;
   background: #fff;
-  -webkit-transform: rotateY( 0deg );
-  -moz-transform: rotateY( 0deg );
-  -o-transform: rotateY( 0deg );
-  transform: rotateY( 0deg );
+  -webkit-transform: rotateY(0deg);
+  -moz-transform: rotateY(0deg);
+  -o-transform: rotateY(0deg);
+  transform: rotateY(0deg);
   transition: all 200ms ease-out;
 }
-.carouselPrev{
-  left:-26px;
-  top:0;
-  -webkit-transform: rotateY( 117deg );
-  -moz-transform: rotateY( 117deg );
-  -o-transform: rotateY( 117deg );
-  transform: rotateY( 117deg );
+.carouselPrev {
+  left: -26px;
+  top: 0;
+  -webkit-transform: rotateY(117deg);
+  -moz-transform: rotateY(117deg);
+  -o-transform: rotateY(117deg);
+  transform: rotateY(117deg);
   transition: all 200ms ease-out;
-
 }
-.carouselPrev.visible{
-  left:0;
-  opacity:0.8;
+.carouselPrev.visible {
+  left: 0;
+  opacity: 0.8;
   background: #fff;
-  -webkit-transform: rotateY( 0deg );
-  -moz-transform: rotateY( 0deg );
-  -o-transform: rotateY( 0deg );
-  transform: rotateY( 0deg );
+  -webkit-transform: rotateY(0deg);
+  -moz-transform: rotateY(0deg);
+  -o-transform: rotateY(0deg);
+  transform: rotateY(0deg);
   transition: all 200ms ease-out;
 }
-.carousel .x, .carousel .y{
-  height:2px;
-  width:15px;
-  background:#5ff7d2;
-  position:absolute;
-  top:31px;
-  left:17px;
+.carousel .x,
+.carousel .y {
+  height: 2px;
+  width: 15px;
+  background: #5ff7d2;
+  position: absolute;
+  top: 31px;
+  left: 17px;
   -ms-transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
-.carousel .x{
+.carousel .x {
   -ms-transform: rotate(135deg);
   -webkit-transform: rotate(135deg);
   transform: rotate(135deg);
-  top:21px;
+  top: 21px;
 }
-.carousel .carouselNext .x{
+.carousel .carouselNext .x {
   -ms-transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
-.carousel .carouselNext .y{
+.carousel .carouselNext .y {
   -ms-transform: rotate(135deg);
   -webkit-transform: rotate(135deg);
   transform: rotate(135deg);
 }
 </style>
 <script>
-import HomedeliveryCard from './HomedeliveryCard.vue';
+import HomedeliveryCard from "./HomedeliveryCard.vue";
 
 export default {
-  name:'BookDetail',
-  props:['bookdetail'],
-  mounted(){
-    this.$emit('loaddetailfunction');
+  name: "BookDetail",
+  props: ["bookdetail"],
+  mounted() {
+    this.$emit("loaddetailfunction");
   },
-  methods:{
-    cartEventListener: function(event){
-      this.$emit('addtocart',event);
+  methods: {
+    cartEventListener: function (event) {
+      this.$emit("addtocart", event);
     },
   },
-  components:{
-    'homedelivery-card':HomedeliveryCard
-  }
-}
+  components: {
+    "homedelivery-card": HomedeliveryCard,
+  },
+};
 </script>

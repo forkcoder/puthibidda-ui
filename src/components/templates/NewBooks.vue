@@ -13,7 +13,7 @@
         class="newbook-image"
         :key="newbook.book_cover"
         :class="{ selected: isSelected(index) }"
-        :src="'./storage/bookcovers/' + newbook.book_cover"
+        :src="require('@/assets/bookcovers/' + newbook.book_cover)"
       />
       <div class="newbook-footer">
         <h3 class="newbook-title" v-text="newbook.book_title"></h3>
@@ -29,16 +29,16 @@
     </div>
     <div>
       <div @click="newArrivalPrev" class="bookScroller scroller-prev">
-        <img
-          :src="'./storage/images/prevCategory.png'"
+        <!-- <img
+          :src="require('@/assets/images/prevCategory.png')"
           style="width: 48px; height: 48px"
-        />
+        /> -->
       </div>
       <div @click="newArrivalNext" class="bookScroller scroller-next">
-        <img
-          :src="'./storage/images/nextCategory.png'"
+        <!-- <img
+          :src="require('@/assets/images/nextCategory.png')"
           style="width: 48px; height: 48px"
-        />
+        /> -->
       </div>
     </div>
     <book-detail :bookdetail="bookdetail" :appdetail="appnewbook" />

@@ -4,8 +4,6 @@
       <a> {{ title }} </a>
     </li>
     <li
-      @mouseover="visibleControls(prefix)"
-      @mouseleave="hideControls(prefix)"
       :id="prefix + 'carousel'"
       class="carousel slide"
       :data-ride="prefix + 'carousel'"
@@ -50,8 +48,9 @@
                 '-' +
                 book.id
               "
-              @mouseover="
-                hoverBook(
+              :class="{ highlighted: index === hoveredIndex }"
+              @mouseenter="
+                setHoveredIndex(
                   prefix +
                     '-' +
                     (n - 1) * booksPerPage +
@@ -61,18 +60,7 @@
                     book.id
                 )
               "
-              @mouseout="hoverBook(-1)"
-              @mouseleave="
-                leaveBook(
-                  prefix +
-                    '-' +
-                    (n - 1) * booksPerPage +
-                    '-' +
-                    index +
-                    '-' +
-                    book.id
-                )
-              "
+              @mouseleave="setHoveredIndex(-1)"
               class="book"
             >
               <img
@@ -90,7 +78,7 @@
                   'cover'
                 "
                 :class="{ selected: isSelected(prefix + '-' + book.id) }"
-                :src="'./storage/bookcovers/' + book.book_id + '.jpg'"
+                :src="require('@/assets/bookcovers/' + book.book_id + '.jpg')"
               />
 
               <div
@@ -111,7 +99,9 @@
                   v-on:click="cartEventListener($event)"
                   :data-price="book.book_price"
                   :data-title="book.book_title"
-                  :data-cover="'./storage/bookcovers/' + book.book_id + '.jpg'"
+                  :data-cover="
+                    require('@/assets/bookcovers/' + book.book_id + '.jpg')
+                  "
                   v-text="uxmenu['addtocart']"
                 ></button>
               </div>
@@ -212,6 +202,9 @@ export default {
         "--title-color": this.titleColor,
       };
     },
+    hoverClass() {
+      return this.hoveredIndex !== -1 ? "highlighted" : "";
+    },
   },
   created() {
     window.addEventListener("resize", this.getWindowWidth);
@@ -229,24 +222,6 @@ export default {
     this.loadData();
   },
   methods: {
-    visibleControls: function (prefix) {
-      if (this.totalPage > 1) {
-        this.$("#" + prefix + "carousel-control-prev").css({
-          visibility: "visible",
-        });
-        this.$("#" + prefix + "carousel-control-next").css({
-          visibility: "visible",
-        });
-      }
-    },
-    hideControls: function (prefix) {
-      this.$("#" + prefix + "carousel-control-prev").css({
-        visibility: "hidden",
-      });
-      this.$("#" + prefix + "carousel-control-next").css({
-        visibility: "hidden",
-      });
-    },
     cartEventListener: function (event) {
       this.$emit("addtocart", event);
     },
@@ -284,29 +259,33 @@ export default {
         this.renderData();
       });
     },
-    hoverBook(selectedIndex) {
-      this.selectedBook = selectedIndex;
+    hoverBook(index) {
+      this.hoveredIndex = index;
+      // this.selectedBook = selectedIndex;
       // this.animateBooks();
       // console.log(this.selectedBook);
       // alert(selectedIndex);
-      if (selectedIndex != -1) {
-        // this.$("#"+selectedIndex+'addtocart').css({'bottom':'0','display':'block'})
-        this.$("#" + selectedIndex + "cover").css({
-          height: "135px",
-          width: "auto",
-          cursor: "pointer",
-        });
-      }
+      // if (selectedIndex != -1) {
+      //   // this.$("#"+selectedIndex+'addtocart').css({'bottom':'0','display':'block'})
+      //   this.$("#" + selectedIndex + "cover").css({
+      //     height: "135px",
+      //     width: "auto",
+      //     cursor: "pointer",
+      //   });
+      // }
     },
-    leaveBook(selectedIndex) {
-      if (selectedIndex != -1) {
-        // this.$("#"+selectedIndex+'addtocart').css({'display':'none'})
-        this.$("#" + selectedIndex + "cover").css({
-          height: "130px",
-          opacity: "1",
-        });
-      }
+    setHoveredIndex(index) {
+      this.hoveredIndex = index;
     },
+    // leaveBook(selectedIndex) {
+    //   if (selectedIndex != -1) {
+    //     // this.$("#"+selectedIndex+'addtocart').css({'display':'none'})
+    //     this.$("#" + selectedIndex + "cover").css({
+    //       height: "130px",
+    //       opacity: "1",
+    //     });
+    //   }
+    // },
     // animateBooks () {
     // 	this.books.forEach((book, index) => {
     // 		const direction = this.calculateBookDirection(index, this.selectedBook)
@@ -517,6 +496,11 @@ border-right: 41px solid transparent;
 .book-rating {
   line-height: 10px;
   font-size: 10px;
+}
+.highlighted {
+  position: "relative";
+  height: "110%";
+  opacity: "0.3";
 }
 /* .book {
 transition: height 0.3s, box-shadow 0.3s;

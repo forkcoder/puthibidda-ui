@@ -12,20 +12,7 @@
     <noscript>
       <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
-    <div id="root">
-      <super-container
-      :uxmenu="uxmenu"
-      :containers="uxmeta.containers"
-      :panels="uxmeta.panels"
-      :cards="uxmeta.cards"
-      v-on:huntbooks="loadUXmeta"
-      v-on:homepage="loadUXmeta"
-      v-on:showdetail="loadUXmeta"
-      v-on:updatelang="loadUXmenu"
-      v-on:addtocart="addToCart"
-      v-on:loaddetailfunction="loadDTLfnct"
-    ></super-container>
-    </div>
+    <div id="app"></div>
     <!-- built files will be auto injected -->
   </body>
 </html>

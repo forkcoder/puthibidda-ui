@@ -13,8 +13,13 @@ import { createRouter, createWebHistory } from 'vue-router';
 import NewBooks from '../templates/NewBooks.vue'
 import Books from '../templates/BookStore.vue'
 import Categories from '../templates/CategoryList.vue'
-
+import SuperContainer from "../containers/SuperContainer.vue"
 const routes = [
+  {
+    path: '/',
+    name: 'SuperContainer',
+    component: SuperContainer
+  },
   {
     path: '/newbooks',
     name: 'NewBooks',

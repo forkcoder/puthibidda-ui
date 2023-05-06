@@ -12,7 +12,7 @@
       <img
         class="book-image"
         :class="{ selected: isSelected(index) }"
-        :src="'./storage/bookcovers/' + book.book_cover"
+        :src="require('@/assets/bookcovers/' + book.book_cover)"
       />
       <div class="book-footer">
         <h3 class="book-title" v-text="book.title"></h3>

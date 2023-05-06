@@ -63,7 +63,7 @@
                 'cover'
               "
               :class="{ selected: isSelected(prefix + '-' + book.id) }"
-              :src="'./storage/bookcovers/' + book.book_id + '.jpg'"
+              :src="require('@/assets/bookcovers/' + book.book_id + '.jpg')"
             />
 
             <div
