@@ -20,8 +20,8 @@ export default {
   props: ["books", "categories", "appjs"],
   data() {
     return {
-      uxmeta: [],
-      uxmenu: [],
+      uxmeta: {'containers':{}, 'panels':{}, 'cards':{}},
+      uxmenu: {},
       handle: "homepage",
       categorypage: -1,
     };

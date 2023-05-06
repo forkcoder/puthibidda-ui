@@ -2,7 +2,6 @@
   <ul class="suppercontainer">
     <top-container
       v-if="
-        containers.some((data) => data.id === 'top-container') &&
         containers['top-container'] == 1
       "
       :panels="panels"
@@ -18,7 +17,6 @@
     ></menubar-panel>
     <base-container
       v-if="
-        containers.some((data) => data.id === 'base-container') &&
         containers['base-container'] == 1
       "
       :panels="panels"
