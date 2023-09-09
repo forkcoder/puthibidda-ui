@@ -1,7 +1,7 @@
 <template>
 	<li class="topcontainer">
-	<searchbar-panel  v-if="panels['searchbar-panel']==1" :cards="cards" v-on:searchbooks="findBooks" v-on:homepage="homePage"></searchbar-panel>
-</li>
+		<searchbar-panel  v-if="panels['searchbar-panel']==1" :cards="cards" v-on:searchbooks="findBooks" v-on:homepage="homePage"></searchbar-panel>
+	</li>
 </template>
 
 <style scoped>
@@ -21,19 +21,19 @@
 <script>
       import SearchBarPanel from '../panels/SearchBarPanel.vue'
       export default {
-          name: 'TopContainer',
-					props:['panels','cards'],
-					methods:{
-							findBooks: function(){
-								this.$emit('findbooks');
-								// alert('find books');
-							},
-							homePage: function(){
-								this.$emit('homepage');
-							}
-					},
-          components:{
-							'searchbar-panel': SearchBarPanel
+		name: 'TopContainer',
+		props:['panels','cards'],
+		methods:{
+				findBooks: function(){
+					this.$emit('findbooks');
+					// alert('find books');
+				},
+				homePage: function(){
+					this.$emit('homepage');
+				}
+		},
+		components:{
+			'searchbar-panel': SearchBarPanel
         }
   }
 </script>

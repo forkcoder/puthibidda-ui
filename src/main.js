@@ -29,13 +29,13 @@ app.config.globalProperties.$http = apiProxy;
 app.config.devtools = true;
 // app.use(router)
 app.component('todays-special', TodaysSpecial)
-  app.component('book-finder', BookFinder)
-  app.component('welcome-menu', WelcomeMenu)
-  app.component('new-registration', NewRegistration)
-  app.component('homecontacthelp-nav', HomecontacthelpNav)
-  app.component('super-container', SuperContainer)
-  app.component('mobile-container', MobileContainer)
-  app.mount('#app')
+app.component('book-finder', BookFinder)
+app.component('welcome-menu', WelcomeMenu)
+app.component('new-registration', NewRegistration)
+app.component('homecontacthelp-nav', HomecontacthelpNav)
+app.component('super-container', SuperContainer)
+app.component('mobile-container', MobileContainer)
+app.mount('#app')
 
   
 

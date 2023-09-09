@@ -1,10 +1,7 @@
 <template>
   <ul class="suppercontainer">
     <top-container
-      v-if="
-        containers.some((data) => data.id === 'top-container') &&
-        containers['top-container'] == 1
-      "
+      v-if="containers['top-container'] == 1"
       :panels="panels"
       :cards="cards"
       v-on:findbooks="exploreBooks"
@@ -17,10 +14,7 @@
       v-on:changelang="changeLang"
     ></menubar-panel>
     <base-container
-      v-if="
-        containers.some((data) => data.id === 'base-container') &&
-        containers['base-container'] == 1
-      "
+      v-if="containers['base-container'] == 1"
       :panels="panels"
       :cards="cards"
       :uxmenu="uxmenu"
