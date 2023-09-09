@@ -9,7 +9,7 @@
 			</ol> -->
 			<div class="carousel-inner" >
 				<div class="carousel-item active">
-					<img src="/storage/images/megaads.jpg" class="d-block w-100" alt="Book1" >
+					<img src="@/assets/images/megaads.jpg" class="d-block w-100" alt="Book1" >
 					<!-- <div class="carousel-caption d-none d-md-block">
 					<h5>First slide label</h5>
 					<p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>

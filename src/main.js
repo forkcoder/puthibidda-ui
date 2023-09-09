@@ -5,7 +5,6 @@ import axios from 'axios';
 const apiProxy = axios.create({
   baseURL: process.env.VUE_APP_BASE_URL // Replace with your desired base URL
 });
-import '@babel/polyfill';
 import $ from 'jquery';
 window.$ = window.jQuery = $;
 import 'select2'

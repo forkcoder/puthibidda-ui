@@ -5,7 +5,6 @@
 
 <style scoped>
 #dCard {
-	background-repeat: ;
 	background-size: cover;
 	-webkit-transition: background-image 0.2s ease-in-out;
 	transition: background-image 0.2s ease-in-out;

@@ -35,7 +35,7 @@
             <li v-for="(book, index) in books.slice(0, 5)" :key="index">
               <img
                 class="img_card"
-                :src="'/storage/bookcovers/' + book.book_id + '.jpg'"
+                :src="'@/assets/bookcovers/' + book.book_id + '.jpg'"
                 alt="Image"
               />
             </li>
@@ -46,7 +46,7 @@
             <li v-for="(book, index) in books.slice(0, 3)" :key="index">
               <img
                 :class="'img_card_' + index"
-                :src="'/storage/bookcovers/' + book.book_id + '.jpg'"
+                :src="'@/assets/bookcovers/' + book.book_id + '.jpg'"
                 alt="Image"
               />
             </li>

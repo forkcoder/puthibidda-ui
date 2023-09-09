@@ -3,7 +3,7 @@
 		<nav id="searchbarNavbar" class="navbar navbar-laravel">
 				<li>
 					<a  class="navbar-brand" href="#"  v-on:click="homePage" >
-						<img src="storage/logos/logo2000.png" alt="" style="height: 50px" />
+						<img src="@/assets/logos/logo2000.png" alt="" style="height: 50px" />
 					</a>
 				</li>
 				<li class="searchmodule">
@@ -13,7 +13,7 @@
 					</div>
 				</li>
 				<li class="homedeliveryAds">
-					<img src="storage/icons/homedelivery.png" alt="" style="height: 50px;" />
+					<img src="@/assets/icons/homedelivery.png" alt="" style="height: 50px;" />
 				</li>
 			</nav>
 	</li>

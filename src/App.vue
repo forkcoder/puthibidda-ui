@@ -248,7 +248,9 @@ export default {
   },
 };
 </script>
-
+<style lang="scss">
+@import "@/assets/scss/appDesktop.scss";
+</style>
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;

@@ -4,7 +4,7 @@
       <nav id="searchbarNavbar" class="navbar navbar-laravel">
         <li class="homeLogo">
           <a href="#" v-on:click="homePage">
-            <img src="/storage/icons/home.png" alt="" style="height: 30px" />
+            <img src="@/assets/icons/home.png" alt="" style="height: 30px" />
           </a>
         </li>
         <li class="searchmodule">
@@ -80,52 +80,52 @@ export default {
       categories: [
         {
           name: "সকল ধরনের",
-          src: "/storage/images/mobile/categories/all.png",
+          src: "/images/mobile/categories/all.png",
           color: "#686262",
         },
         {
           name: "সাহিত্য",
-          src: "/storage/images/mobile/categories/literature.png",
+          src: "/images/mobile/categories/literature.png",
           color: "#44e2d3",
         },
         {
           name: "ছোট গল্প",
-          src: "/storage/images/mobile/categories/shortstory.png",
+          src: "/images/mobile/categories/shortstory.png",
           color: "#92b4ef",
         },
         {
           name: "গোয়েন্দা কাহিনী এবং রহস্য",
-          src: "/storage/images/mobile/categories/mistry.png",
+          src: "/images/mobile/categories/mistry.png",
           color: "#ec85d6",
         },
         {
           name: "উপন্যাস",
-          src: "/storage/images/mobile/categories/novel.png",
+          src: "/images/mobile/categories/novel.png",
           color: "#317024",
         },
         {
           name: "ভ্রমণ কাহিনী",
-          src: "/storage/images/mobile/categories/travel.png",
+          src: "/images/mobile/categories/travel.png",
           color: "#288a4c",
         },
         {
           name: "ঐতিহাসিক",
-          src: "/storage/images/mobile/categories/historical.png",
+          src: "/images/mobile/categories/historical.png",
           color: "#8f642a",
         },
         {
           name: "কাব্যগ্রন্থ",
-          src: "/storage/images/mobile/categories/poembook.png",
+          src: "/images/mobile/categories/poembook.png",
           color: "#807d3e",
         },
         {
           name: "প্রেমের গল্প",
-          src: "/storage/images/mobile/categories/lovepoem.png",
+          src: "/images/mobile/categories/lovepoem.png",
           color: "#803f3f",
         },
         {
           name: "আরও",
-          src: "/storage/images/mobile/categories/more.png",
+          src: "/images/mobile/categories/more.png",
           color: "#808080",
         },
       ],

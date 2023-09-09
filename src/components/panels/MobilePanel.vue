@@ -14,7 +14,7 @@
       v-if="categorypage == -1"
       :title="'Favorite Books'"
       :id="'favorite'"
-      :path="'/storage/images/mobile/cardbk/'"
+      :path="'/images/mobile/cardbk/'"
       :orientation="'linear'"
     ></mobile-card>
     <item-card
@@ -29,7 +29,7 @@
       v-if="categorypage == -1"
       :title="'Popular Books'"
       :id="'popular'"
-      :path="'/storage/images/mobile/cardbk/'"
+      :path="'/images/mobile/cardbk/'"
       :orientation="'pyramid'"
     ></mobile-card>
     <item-card

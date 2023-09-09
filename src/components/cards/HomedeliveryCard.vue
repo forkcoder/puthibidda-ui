@@ -1,6 +1,6 @@
 <template>
 	<li class="homedeliverycard">
-			<img src="storage/icons/homedelivery.png" alt="" style="height: 50px;" />
+			<img src="@/assets/icons/homedelivery.png" alt="" style="height: 50px;" />
 	</li>
 </template>
 

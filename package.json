@@ -9,18 +9,13 @@
   },
   "dependencies": {
     "@alfsnd/vue-bootstrap-select": "^0.4.4",
-    "@babel/eslint-parser": "^7.21.8",
-    "@babel/polyfill": "^7.12.1",
     "@vue/cli-plugin-eslint": "^5.0.8",
     "@vue/cli-service": "^5.0.8",
     "@vue/compiler-sfc": "^3.2.47",
     "axios": "^1.4.0",
     "bootstrap-vue": "^2.23.1",
-    "core-js": "^3.8.3",
     "es6-promise": "^4.2.8",
     "material-design-icons": "^3.0.1",
-    "node-gyp": "^9.3.1",
-    "npm": "^9.6.5",
     "promise-polyfill": "8.3.0",
     "select2": "^4.0.13",
     "tar": "^6.1.13",
@@ -32,6 +27,7 @@
     "vue-validate": "^1.0.1"
   },
   "devDependencies": {
+    "@babel/eslint-parser": "^7.22.15",
     "@vue/cli-plugin-babel": "^5.0.8",
     "@vue/cli-plugin-router": "~5.0.0",
     "bootstrap": "^5.2.3",
@@ -44,11 +40,9 @@
     "jquery-ui": "^1.13.2",
     "laravel-mix": "^6.0.49",
     "lodash": "^4.17.21",
-    "node-sass": "^8.0.0",
-    "popper.js": "^1.15.0",
-    "resolve-url-loader": "^5.0.0",
+    "node-sass": "^9.0.0",
     "sass": "^1.62.1",
-    "sass-loader": "^13.2.2",
+    "sass-loader": "^13.3.2",
     "vue-template-compiler": "^2.7.14"
   },
   "eslintConfig": {

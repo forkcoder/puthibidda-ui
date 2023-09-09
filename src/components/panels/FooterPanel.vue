@@ -86,9 +86,9 @@
         <p v-text="uxmenu['weacceptthesepayment']"></p>
         <img
           class="lazy loaded"
-          data-lazy="/storage/images/desktop/paymentby.jpeg"
+          data-lazy="/images/desktop/paymentby.jpeg"
           alt="Payment methods"
-          src="/storage/images/desktop/paymentby.jpeg"
+          src="/images/desktop/paymentby.jpeg"
         />
       </div>
       <div class="small-print">

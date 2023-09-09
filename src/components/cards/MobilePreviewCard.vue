@@ -86,7 +86,7 @@
                   v-on:click="cartEventListener($event)"
                   :data-price="book.book_price"
                   :data-title="book.book_title"
-                  :data-cover="'/storage/bookcovers/' + book.book_id + '.jpg'"
+                  :data-cover="'/bookcovers/' + book.book_id + '.jpg'"
                   >{{ "BDT " + book.book_price }}</a
                 >
               </div>

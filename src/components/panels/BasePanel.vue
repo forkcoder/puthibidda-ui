@@ -1,13 +1,13 @@
 <template>
   <li class="basepanel">
     <!-- <ads-card id="ID_baseAds" :title="'Ads Card'" v-if="cards['ads-card']==1" ></ads-card> -->
-    <!-- <ads-card :id="'favorite'" :path="'/storage/images/desktop/cardbk/'" v-if="cards['ads-card']==1" ></ads-card> -->
+    <!-- <ads-card :id="'favorite'" :path="'/images/desktop/cardbk/'" v-if="cards['ads-card']==1" ></ads-card> -->
     <orderstatus-card v-if="cards['orderstatus-card'] == 1"></orderstatus-card>
     <desktop-card
       v-if="cards['ads-card'] == 1"
       :title="'Favorite Books'"
       :id="'favorite'"
-      :path="'/storage/images/desktop/cardbk/'"
+      :path="'/images/desktop/cardbk/'"
       :orientation="'linear'"
     ></desktop-card>
     <preview-card

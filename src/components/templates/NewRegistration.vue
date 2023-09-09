@@ -37,7 +37,7 @@
             </li>
           </ul>
         </div>
-        <img src="/storage/logos/logoshort.png" alt="" />
+        <img src="@/assets/logos/logoshort.png" alt="" />
         <h3>পুঁথিবিদ্যায় স্বাগতম</h3>
         <p>সদস্য হউন এবং অন্যকে জানান।</p>
         <input type="submit" name="" value="Login" /><br />
@@ -444,7 +444,7 @@
                   <div class="col-md-5 profilecover">
                     <img
                       :src="
-                        '/storage/librarycovers/' +
+                        '/librarycovers/' +
                         library_info['library_cover']
                       "
                     />

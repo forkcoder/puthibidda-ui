@@ -2,13 +2,13 @@
 	<ul class="homecontacthelpnav">
 			<!-- <a href="#0" class="cd-add-to-cart js-cd-add-to-cart" data-price="22.99">Add To Cart</a> -->
 			<li>
-				<a href="/"><img src="storage/icons/home.png" alt="" style="height: 24px;"/></a>
+				<a href="/"><img src="@/assets/icons/home.png" alt="" style="height: 24px;"/></a>
 			</li>
 			<li>
-				<img src="storage/icons/contactus.png" alt="" style="height: 20px;"> <span class="textMenus" style="margin-left:2px; color:white">Contact Us</span>
+				<img src="@/assets/icons/contactus.png" alt="" style="height: 20px;"> <span class="textMenus" style="margin-left:2px; color:white">Contact Us</span>
 			</li>
 			<li>
-				<a v-on:click="showHelps" style="cursor:pointer"><img src="storage/icons/help.png" alt="" style="height: 24px;"> <span class="textMenus" style="margin-left:2px; color:white">Help</span></a>
+				<a v-on:click="showHelps" style="cursor:pointer"><img src="@/assets/icons/help.png" alt="" style="height: 24px;"> <span class="textMenus" style="margin-left:2px; color:white">Help</span></a>
 			</li>
 		</ul>
 </template>

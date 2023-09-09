@@ -53,7 +53,25 @@ import TopContainer from "./TopContainer.vue";
 import MenuBarPanel from "../panels/MenuBarPanel.vue";
 export default {
   name: "SuperContainer",
-  props: ["containers", "panels", "cards", "uxmenu"],
+  props: {
+  containers: {
+    type: Object,
+    default: () => ({})
+  },
+  panels: {
+    type: Object,
+    default: () => ({})
+  },
+  cards: {
+    type: Object,
+    default: () => ({})
+  },
+  uxmenu: {
+    type: Object,
+    default: () => ({})
+  }
+}
+,
   data: function () {
     return {
       cons: [],
